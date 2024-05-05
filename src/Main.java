@@ -2,14 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("PGO-4 przeciazenia");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Multiplier multiplier = new Multiplier();
+        Adder adder = new Adder();
+
+
+//        String name="sonoo";
+//        String sf1=String.format("name is %s",name);
+//        String sf2=String.format("value is %f",32.33434);
+//        String sf3=String.format("value is %32.12f",32.33434);//returns 12 char fractional part filling with 0
+//
+//        System.out.println(sf1);
+//        System.out.println(sf2);
+//        System.out.println(sf3);
+
+
     }
 }
