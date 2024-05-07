@@ -1,6 +1,5 @@
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Multiplier {
 
@@ -21,10 +20,31 @@ public class Multiplier {
         return a.multiply(b);
     }
 
-//    public static int multiply(ArrayList<int> a) {
-//        for (ArrayList<int> arrayList : a){
-//            return 0;
-//        }
+    public static Integer multiply(ArrayList<Integer> abList) {
+        int outcome = 0;
+        System.out.println("Start "+outcome);
+
+        if (abList.size() > 0) {
+            outcome = abList.get(0);
+            System.out.println("00 "+outcome);
+
+
+            if (abList.size() > 1) {
+                outcome = abList.get(0) * abList.get(1);
+                System.out.println("01 "+outcome);
+
+            }
+            if (abList.size() > 2) {
+                for (int i = 2; i < abList.size(); i++) {
+                    outcome = outcome * abList.get(i);
+                    System.out.println(outcome);
+                }
+            }
+
+        }
+        return outcome;
+    }
+
 
 //    }
 

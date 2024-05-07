@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -7,6 +9,14 @@ public class Main {
         Multiplier multiplier = new Multiplier();
         Adder adder = new Adder();
 
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(7);
+        list.add(12);
+        list.add(8);
+        list.add(74);
+        list.add(12);
+
+        multiplier.multiply(list);
 
 //        String name="sonoo";
 //        String sf1=String.format("name is %s",name);
