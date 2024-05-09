@@ -1,7 +1,7 @@
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.println("PGO-4 przeciazenia");
@@ -15,8 +15,13 @@ public class Main {
         list.add(8);
         list.add(74);
         list.add(12);
+@Test
+
 
         multiplier.multiply(list);
+        System.out.println(multiplier.multiply(7,5));
+        System.out.println(multiplier.multiply(7.43,5.54));
+
 
 //        String name="sonoo";
 //        String sf1=String.format("name is %s",name);
