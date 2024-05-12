@@ -37,9 +37,9 @@ public class TestMultipler {
 
     @Test
     public void testMuliplierTwoBigDecimal() {
-        BigDecimal aBig = new BigDecimal(3889.82);
-        BigDecimal bBig = new BigDecimal(7788656.689);
-        BigDecimal cBig = new BigDecimal("30296472562.00598223146033344164611140190458693499664377668523229658603668212890625");
+        BigDecimal aBig = new BigDecimal("3889.82");
+        BigDecimal bBig = new BigDecimal("7788656.689");
+        BigDecimal cBig = new BigDecimal("30296472562.00598");
         Assertions.assertEquals(multiplier.multiply(aBig, bBig), cBig);
     }
 

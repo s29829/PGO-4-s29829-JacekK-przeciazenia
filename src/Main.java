@@ -63,6 +63,6 @@ public class Main {
         System.out.println(addres.createAddress("Poland", "Warszawa", "02-222"));
         System.out.println(addres.createAddress("Poland", "Warszawa", "02-222", "Koszykowa"));
         System.out.println(addres.createAddress("Poland", "Warszawa", "02-222", "Koszykowa", "86A"));
-        System.out.println("");
+        System.out.println(" ");
     }
 }

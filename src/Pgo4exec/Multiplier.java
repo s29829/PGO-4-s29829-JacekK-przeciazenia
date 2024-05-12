@@ -22,15 +22,16 @@ public class Multiplier {
         if (aBig == null || bBig == null) {
             throw new IllegalArgumentException("Argument cannot be null");
         }
+//        System.out.println(aBig.multiply(bBig));
         return aBig.multiply(bBig);
     }
 
     public static int multiply(ArrayList<Integer> abList) {
-        if (abList == null || abList.size() == 0) {
+        if (abList == null || abList.isEmpty()) {
             throw new IllegalArgumentException("Argument cannot be null");
         }
         int outcome = 0;
-        if (abList.size() > 0) {
+        if (!abList.isEmpty()) {
             outcome = abList.get(0);
             if (abList.size() > 1) {
                 outcome = abList.get(0) * abList.get(1);

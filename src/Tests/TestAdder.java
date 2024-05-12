@@ -12,7 +12,7 @@ public class TestAdder {
 
     @Test
     public void testAddTwoInteger() {
-        int a = 8, b = 2, c=10;
+        int a = 8, b = 2;
         Assertions.assertEquals(adder.add(a,b),10);
     }
 
