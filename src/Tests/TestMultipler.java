@@ -7,11 +7,6 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-// przyjmującą jako parametry dwie zmienne typu int
-//b) przyjmującą jako parametry 4 zmienne typu int (ta metoda powinna w swoim ciele wywoływać powyższą metodę przyjmującą dwa parametry typu int)
-//c) przyjmującą jako parametry 2 zmienne typu double
-//d) przyjmującą jako parametry dwa obiekty typu BigDecimal
-//e) przyjmującą jako parametr listę obiektów klasy Integer
 
 public class TestMultipler {
 
