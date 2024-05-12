@@ -1,11 +1,10 @@
+package Pgo4exec;
+
 public class Address {
 
 
-    private String country;
-    private String city;
-    private String postCode;
-    private String street;
-    private String streetNumber;
+    private String country, city, postCode, street, streetNumber;
+//   streetNumber - can be with letter  - for. ex. 86A or 16d
 
     public String createAddress(String country) {
         this.country = country;
@@ -22,7 +21,7 @@ public class Address {
         this.country = country;
         this.city = city;
         this.postCode = postCode;
-        return String.format("Country: %s, City: %s, PostCode: %s:", country, city, postCode);
+        return String.format("Country: %s, City: %s, PostCode: %s", country, city, postCode);
     }
 
     public String createAddress(String country, String city, String postCode, String street) {
@@ -39,6 +38,6 @@ public class Address {
         this.postCode = postCode;
         this.street = street;
         this.streetNumber = streetNumber;
-        return String.format("Country: %s, City: %s, PostCode: %s, Street: %s, Street Number:%s", country, city, postCode, street, streetNumber);
+        return String.format("Country: %s, City: %s, PostCode: %s, Street: %s, Street Number: %s", country, city, postCode, street, streetNumber);
     }
 }
