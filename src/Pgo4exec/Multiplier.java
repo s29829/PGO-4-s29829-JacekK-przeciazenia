@@ -18,28 +18,29 @@ public class Multiplier {
         return a * b;
     }
 
-    public static BigDecimal multiply(BigDecimal a, BigDecimal b) {
-        return a.multiply(b);
+    public static BigDecimal multiply(BigDecimal aBig, BigDecimal bBig) {
+        if (aBig == null || bBig == null) {
+            throw new IllegalArgumentException("Argument cannot be null");
+        }
+        return aBig.multiply(bBig);
     }
 
-    public static Integer multiply(ArrayList<Integer> abList) {
+    public static int multiply(ArrayList<Integer> abList) {
+        if (abList == null || abList.size() == 0) {
+            throw new IllegalArgumentException("Argument cannot be null");
+        }
         int outcome = 0;
-        System.out.println("Start "+outcome);
-
         if (abList.size() > 0) {
             outcome = abList.get(0);
-            System.out.println("00 "+outcome);
-
-
             if (abList.size() > 1) {
                 outcome = abList.get(0) * abList.get(1);
-                System.out.println("01 "+outcome);
-
             }
             if (abList.size() > 2) {
                 for (int i = 2; i < abList.size(); i++) {
                     outcome = outcome * abList.get(i);
-                    System.out.println(outcome);
+                    if (outcome < 0) {
+                        throw new RuntimeException("Out of range");
+                    }
                 }
             }
 
@@ -47,7 +48,5 @@ public class Multiplier {
         return outcome;
     }
 
-
-//    }
 
 }

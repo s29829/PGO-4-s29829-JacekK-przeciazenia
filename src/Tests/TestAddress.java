@@ -33,6 +33,7 @@ public class TestAddress {
 
     @Test
     void testAddressWithCountryAndCityAndPostalCodeAndSteetAndStreetNumber() {
+
         Assertions.assertEquals(address.createAddress("Poland", "Warszawa", "02-222", "Koszykowa","86A"), "Country: Poland, City: Warszawa, PostCode: 02-222, Street: Koszykowa, Street Number: 86A");
     }
 

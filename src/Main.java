@@ -1,47 +1,72 @@
 import Pgo4exec.Adder;
 import Pgo4exec.Address;
 import Pgo4exec.Multiplier;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("PGO-4 przeciazenia");
+        System.out.println("___________________________________");
 
-        Multiplier multiplier = new Multiplier();
-        Adder adder = new Adder();
-
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(7);
-        list.add(12);
-        list.add(8);
-        list.add(74);
-        list.add(12);
 
         Address addres = new Address();
+        addresShowExamples(addres);
+
+
+        Adder adder = new Adder();
+        adderShowExamples(adder);
+
+
+        Multiplier multiplier = new Multiplier();
+        multiplerShowExamples(multiplier);
+
+
+    }
+
+    private static void multiplerShowExamples(Multiplier multiplier) {
+
+        int a = 8, b = 2, c = 7, d = 12;
+        double e = 12.4234, f = 3242.234;
+
+        BigDecimal aBig = new BigDecimal("4531.2543");
+        BigDecimal bBig = new BigDecimal("15433.2453");
+        BigDecimal cBig = new BigDecimal("19964.4996");
+
+        ArrayList<Integer> intList = new ArrayList<>();
+        intList.add(67);
+        intList.add(34);
+        intList.add(287);
+        intList.add(435);
+
+        System.out.println("a) Multiply of two integer: a=" + a + " * b=" + b + " is: " + multiplier.multiply(a, b));
+        System.out.println("b) Multiply of four integer: a=" + a + " * b=" + b + " * c=" + a + " * d=" + b + " is: " + multiplier.multiply(a, b, c, d));
+        System.out.println("c) Multiply of two double: e=" + a + " * f=" + b + " is: " + multiplier.multiply(e, f));
+        System.out.println("d) Multiply of two BigDecimal: aBig=" + a + " * bBig=" + b + " is: " + multiplier.multiply(aBig, bBig));
+        System.out.println("e) Multiply of integer's list = {67, 34, 287, 436}" + multiplier.multiply(intList));
+        System.out.println("");
+    }
+
+    private static void adderShowExamples(Adder adder) {
+        int a = 8, b = 2;
+        System.out.println("Sum of two integer: a=" + a + " + b=" + b + " is: " + adder.add(a, b));
+
+        BigDecimal aBig = new BigDecimal("4531.2543");
+        BigDecimal bBig = new BigDecimal("15433.2453");
+        BigDecimal cBig = new BigDecimal("19964.4996");
+        System.out.println("Sum of two BigDecimal a=" + aBig + " + b=" + bBig + " is: " + adder.add(aBig, bBig));
+        System.out.println("");
+    }
+
+    private static void addresShowExamples(Address addres) {
         System.out.println(addres.createAddress("Poland"));
         System.out.println(addres.createAddress("Poland", "Warszawa"));
-        System.out.println(addres.createAddress("Poland", "Warszawa","02-222"));
-        System.out.println(addres.createAddress("Poland", "Warszawa","02-222", "Koszykowa"));
-        System.out.println(addres.createAddress("Poland", "Warszawa","02-222", "Koszykowa", "86A"));
-
-        //        multiplier.multiply(list);
-//        System.out.println(multiplier.multiply(7,5));
-//        System.out.println(multiplier.multiply(7.43,5.54));
-//
-//        Tests.TestAddress testAddr = new Tests.TestAddress();
-//        testAddr.testAddress();
-
-
-        String name="sonoo";
-        String sf1=String.format("name is %s",name);
-        String sf2=String.format("value is %f",32.33434);
-        String sf3=String.format("value is %32.12f",32.33434);//returns 12 char fractional part filling with 0
-//
-//        System.out.println(sf1);
-//        System.out.println(sf2);
-//        System.out.println(sf3);
-
-
+        System.out.println(addres.createAddress("Poland", "Warszawa", "02-222"));
+        System.out.println(addres.createAddress("Poland", "Warszawa", "02-222", "Koszykowa"));
+        System.out.println(addres.createAddress("Poland", "Warszawa", "02-222", "Koszykowa", "86A"));
+        System.out.println("");
     }
 }

@@ -18,8 +18,9 @@ public class TestAdder {
 
     @Test
     public void testAddTwoBigDecimal() {
-//        BigDecimal a = new BigDecimal("1.23");
-        int a = 8, b = 2, c = 10;
-        Assertions.assertEquals(adder.add(a, b), 10);
+        BigDecimal aBig = new BigDecimal("4531.2543");
+        BigDecimal bBig = new BigDecimal("15433.2453");
+        BigDecimal cBig = new BigDecimal("19964.4996");
+        Assertions.assertEquals(adder.add(aBig, bBig), cBig);
     }
 }
