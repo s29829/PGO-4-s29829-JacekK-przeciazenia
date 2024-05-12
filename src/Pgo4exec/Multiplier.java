@@ -30,22 +30,20 @@ public class Multiplier {
         if (abList == null || abList.isEmpty()) {
             throw new IllegalArgumentException("Argument cannot be null");
         }
-        int outcome = 0;
-        if (!abList.isEmpty()) {
-            outcome = abList.get(0);
-            if (abList.size() > 1) {
-                outcome = abList.get(0) * abList.get(1);
-            }
-            if (abList.size() > 2) {
-                for (int i = 2; i < abList.size(); i++) {
-                    outcome = outcome * abList.get(i);
-                    if (outcome < 0) {
-                        throw new RuntimeException("Out of range");
-                    }
+        int outcome = abList.get(0);
+        if (abList.size() > 1) {
+            outcome = abList.get(0) * abList.get(1);
+        }
+        if (abList.size() > 2) {
+            for (int i = 2; i < abList.size(); i++) {
+                outcome = outcome * abList.get(i);
+                if (outcome < 0) {
+                    throw new RuntimeException("Out of range");
                 }
             }
-
         }
+
+
         return outcome;
     }
 
