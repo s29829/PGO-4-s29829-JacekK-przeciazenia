@@ -1,8 +1,6 @@
 import Pgo4exec.Adder;
 import Pgo4exec.Address;
 import Pgo4exec.Multiplier;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -34,7 +32,6 @@ public class Main {
 
         BigDecimal aBig = new BigDecimal("4531.2543");
         BigDecimal bBig = new BigDecimal("15433.2453");
-        BigDecimal cBig = new BigDecimal("19964.4996");
 
         ArrayList<Integer> intList = new ArrayList<>();
         intList.add(67);
@@ -47,7 +44,7 @@ public class Main {
         System.out.println("c) Multiply of two double: e=" + a + " * f=" + b + " is: " + multiplier.multiply(e, f));
         System.out.println("d) Multiply of two BigDecimal: aBig=" + a + " * bBig=" + b + " is: " + multiplier.multiply(aBig, bBig));
         System.out.println("e) Multiply of integer's list = {67, 34, 287, 436}" + multiplier.multiply(intList));
-        System.out.println("");
+        System.out.println(" ");
     }
 
     private static void adderShowExamples(Adder adder) {
@@ -56,9 +53,8 @@ public class Main {
 
         BigDecimal aBig = new BigDecimal("4531.2543");
         BigDecimal bBig = new BigDecimal("15433.2453");
-        BigDecimal cBig = new BigDecimal("19964.4996");
         System.out.println("Sum of two BigDecimal a=" + aBig + " + b=" + bBig + " is: " + adder.add(aBig, bBig));
-        System.out.println("");
+        System.out.println(" ");
     }
 
     private static void addresShowExamples(Address addres) {
